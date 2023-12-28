@@ -20,3 +20,6 @@ execute if score $ohh-id-max ohh-id-0 matches 2147483646 run scoreboard players 
 execute if score $ohh-id-max ohh-id-1 matches 2147483646 run scoreboard players set $ohh-id-max ohh-id-1 -2147483648
 execute if score $ohh-id-max ohh-id-2 matches 2147483646 run scoreboard players set $ohh-id-max ohh-id-2 -2147483648
 execute if score $ohh-id-max ohh-id-3 matches 2147483646 run scoreboard players set $ohh-id-max ohh-id-3 -2147483648
+
+#インタラクションにプレイヤーのid
+scoreboard players operation @e[tag=ohh-summon, tag=ohh-grave-click] ohh-player-id = @s ohh-player-id

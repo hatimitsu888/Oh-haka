@@ -21,6 +21,9 @@ data modify entity @e[distance=..1, tag=ohh-summon, tag=ohh-grave-text, limit=1]
 #タグ削除
 tag @s remove ohh-this-player
 
+#破壊可能かの設定
+scoreboard players operation @e[tag=ohh-summon, tag=ohh-grave-click] ohh-unbreaking = @s ohh-unbreaking
+
 #idを付与
 function oh_haka:create_grave/id
 #クリック回数を付与
