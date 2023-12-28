@@ -1,0 +1,43 @@
+{
+    "criteria": {
+        "click_right": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:interaction",
+                            "nbt": "{Tags:[\"ohh-grave\", \"ohh-grave-click\"]}"
+                        }
+                    }
+                ]
+            }
+        },
+        "click_left": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:interaction",
+                            "nbt": "{Tags:[\"ohh-grave\", \"ohh-grave-click\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "click_right",
+            "click_left"
+        ]
+    ],
+    "rewards": {
+        "function": "oh_haka:break_grave/"
+    }
+}
