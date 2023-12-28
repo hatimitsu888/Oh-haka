@@ -15,5 +15,5 @@
 ![お墓を壊す](/break.webp)  
 お墓は右/左クリックを5回すると壊すことができます。
 # LICENSE
-`[Oh haka](https://github.com/hatimitsu888/Oh-haka) by はちみつ is marked with [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)`  
+[Oh haka](https://github.com/hatimitsu888/Oh-haka) by はちみつ is marked with [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)  
 このデータパックは自由に使ってください。
