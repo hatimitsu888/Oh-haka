@@ -9,9 +9,9 @@ scoreboard players operation $ohh-id-tmp ohh-id-3 = @s ohh-id-3
 execute as @e[tag=ohh-grave-head] if score @s ohh-id-0 = $ohh-id-tmp ohh-id-0 if score @s ohh-id-1 = $ohh-id-tmp ohh-id-1 if score @s ohh-id-2 = $ohh-id-tmp ohh-id-2 if score @s ohh-id-3 = $ohh-id-tmp ohh-id-3 run tag @s add ohh-this-head
 
 #アイテムをドロップ
-execute as @e[tag=ohh-this-head] if data entity @s item.tag.Inventory[-1] run function oh_haka:break_grave/break/drop_item
+execute as @e[tag=ohh-this-head] if data entity @s item.components.minecraft:custom_data.Inventory[-1] run function oh_haka:break_grave/break/drop_item
 #経験値をドロップ
-execute as @e[tag=ohh-this-head] run function oh_haka:break_grave/break/drop_xp
+execute as @e[tag=ohh-this-head,predicate=oh_haka:have_xp] run function oh_haka:break_grave/break/drop_xp
 
 #頭のタグを削除
 tag @e[tag=ohh-this-head] remove ohh-this-head

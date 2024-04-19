@@ -10,4 +10,4 @@ scoreboard players operation $ohh-xp-tmp ohh-tmp *= $ohh-xp-7 ohh-tmp
 execute if score $ohh-xp-tmp ohh-tmp matches 101.. run scoreboard players set $ohh-xp-tmp ohh-tmp 100
 
 #プレイヤーの頭にxpを設定
-execute as @e[tag=ohh-grave-head, tag=ohh-summon] store result entity @s item.tag.Xp int 1 run scoreboard players get $ohh-xp-tmp ohh-tmp
+execute as @e[tag=ohh-grave-head, tag=ohh-summon] store result entity @s item.components.minecraft:custom_data.Xp int 1 run scoreboard players get $ohh-xp-tmp ohh-tmp

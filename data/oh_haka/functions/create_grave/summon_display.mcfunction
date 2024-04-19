@@ -5,13 +5,13 @@ summon block_display ~ ~ ~ {Tags:["ohh-grave","ohh-summon"],transformation:{left
 #プレイヤーの頭
 summon item_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-head","ohh-summon"],transformation:{left_rotation:{axis:[1f, 0f, 0f],angle:0.5236f},right_rotation:[0f,0f,0f,1f],translation:[0f,0.45f,0.2f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",Count:1b}}
 #プレイヤーの名前
-summon text_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-text","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1f,0f],scale:[1f,1f,1f]}, text:'',shadow:0b,billboard:"vertical"}
+summon text_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-text","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1f,0f],scale:[1f,1f,1f]}, text:'{"text":"player_name"}',shadow:0b,billboard:"vertical"}
 #当たり判定
 summon interaction ~ ~ ~ {Tags:["ohh-grave","ohh-grave-click","ohh-summon"],width:1f,height:0.5f}
 
 #頭を死亡したプレイヤーに
 loot spawn ~ ~ ~ loot oh_haka:player_head
-data modify entity @e[distance=..1, tag=ohh-summon, tag=ohh-grave-head, limit=1] item.tag.SkullOwner set from entity @e[predicate=oh_haka:dropped_player_head, distance=..1, limit=1] Item.tag.SkullOwner
+data modify entity @e[distance=..1, tag=ohh-summon, tag=ohh-grave-head, limit=1] item.components.minecraft:profile set from entity @e[predicate=oh_haka:dropped_player_head, distance=..1, limit=1] Item.components.minecraft:profile
 kill @e[predicate=oh_haka:dropped_player_head, distance=..1]
 
 #プレイヤーを指定
