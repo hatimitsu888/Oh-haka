@@ -3,6 +3,6 @@
     "entity": "this",
     "predicate": {
         "type": "minecraft:item",
-        "nbt": "{Age: 0s,Item:{id:\"minecraft:player_head\", tag:{death_player_head: 1b}}}"
+        "nbt": "{Age: 0s,Item:{id:\"minecraft:player_head\", components:{\"minecraft:custom_data\":{death_player_head: 1b}}}}"
     }
 }

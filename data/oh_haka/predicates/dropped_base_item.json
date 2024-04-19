@@ -3,6 +3,6 @@
     "entity": "this",
     "predicate": {
         "type": "minecraft:item",
-        "nbt": "{Age:0s, Item:{tag:{item_drop_base:1b}}}"
+        "nbt": "{Age:0s, Item:{components:{\"minecraft:custom_data\":{item_drop_base:1b}}}}"
     }
 }

@@ -12,7 +12,7 @@
                             "entity": "this"
                         },
                         {
-                            "function": "minecraft:set_nbt",
+                            "function": "minecraft:set_custom_data",
                             "tag": "{death_player_head:1b}"
                         }
                     ]

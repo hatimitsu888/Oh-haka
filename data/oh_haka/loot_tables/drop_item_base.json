@@ -8,7 +8,7 @@
                     "name": "minecraft:oak_button",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
+                            "function": "minecraft:set_custom_data",
                             "tag": "{item_drop_base:1b}"
                         }
                     ]
