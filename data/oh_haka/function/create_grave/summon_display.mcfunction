@@ -3,9 +3,9 @@ summon block_display ~ ~ ~ {Tags:["ohh-grave","ohh-summon"],transformation:{left
 #上の土
 summon block_display ~ ~ ~ {Tags:["ohh-grave","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.4f,-0.3f,-0.4f],scale:[0.8f,0.5f,0.8f]},block_state:{Name:"minecraft:coarse_dirt"}}
 #プレイヤーの頭
-summon item_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-head","ohh-summon"],transformation:{left_rotation:{axis:[1f, 0f, 0f],angle:0.5236f},right_rotation:[0f,0f,0f,1f],translation:[0f,0.45f,0.2f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",Count:1b}}
+summon item_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-head","ohh-summon"],transformation:{left_rotation:{axis:[1f, 0f, 0f],angle:0.5236f},right_rotation:[0f,0f,0f,1f],translation:[0f,0.45f,0.2f],scale:[1f,1f,1f]},item:{id:"minecraft:player_head",count:1b}}
 #プレイヤーの名前
-summon text_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-text","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1f,0f],scale:[1f,1f,1f]}, text:'{"text":"player_name"}',shadow:0b,billboard:"vertical"}
+summon text_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-text","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1f,0f],scale:[1f,1f,1f]}, text:{text:"player_name"},shadow:0b,billboard:"vertical"}
 #当たり判定
 summon interaction ~ ~ ~ {Tags:["ohh-grave","ohh-grave-click","ohh-summon"],width:1f,height:0.5f}
 
@@ -17,7 +17,7 @@ kill @e[predicate=oh_haka:dropped_player_head, distance=..1]
 #プレイヤーを指定
 tag @s add ohh-this-player
 #お墓の名前
-data modify entity @e[distance=..1, tag=ohh-summon, tag=ohh-grave-text, limit=1] text set value '[{"selector":"@p[tag=ohh-this-player]"},{"text":"のお墓"}]'
+data modify entity @e[distance=..1, tag=ohh-summon, tag=ohh-grave-text, limit=1] text set value [{selector:"@p[tag=ohh-this-player]"},{text:"のお墓"}]
 #タグ削除
 tag @s remove ohh-this-player
 
