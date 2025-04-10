@@ -8,6 +8,8 @@ summon item_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-head","ohh-summon"],tran
 summon text_display ~ ~ ~ {Tags:["ohh-grave","ohh-grave-text","ohh-summon"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1f,0f],scale:[1f,1f,1f]}, text:{text:"player_name"},shadow:0b,billboard:"vertical"}
 #当たり判定
 summon interaction ~ ~ ~ {Tags:["ohh-grave","ohh-grave-click","ohh-summon"],width:1f,height:0.5f}
+#ウェイポイント（設定できるエンティティに制限がある）
+summon armor_stand ~ ~ ~ {Tags:["ohh-grave","ohh-grave-waypoint","ohh-summon"],Invisible:true,Invulnerable:true,NoGravity:true,attributes:[{id:"minecraft:scale",base:0.0625}]}
 
 #頭を死亡したプレイヤーに
 loot spawn ~ ~ ~ loot oh_haka:player_head
@@ -28,3 +30,8 @@ scoreboard players operation @e[tag=ohh-summon, tag=ohh-grave-click] ohh-unbreak
 function oh_haka:create_grave/id
 #クリック回数を付与
 scoreboard players set @e[tag=ohh-grave-click, tag=ohh-summon] ohh-click-cnt 0
+
+#ウェイポイントを設定
+attribute @n[tag=ohh-summon, tag=ohh-grave-waypoint] minecraft:waypoint_transmit_range base set 100.0
+waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] color hex D9333F
+waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] fade 95 1 100 0
