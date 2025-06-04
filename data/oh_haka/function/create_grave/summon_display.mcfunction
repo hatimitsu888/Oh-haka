@@ -33,5 +33,5 @@ scoreboard players set @e[tag=ohh-grave-click, tag=ohh-summon] ohh-click-cnt 0
 
 #ウェイポイントを設定
 attribute @n[tag=ohh-summon, tag=ohh-grave-waypoint] minecraft:waypoint_transmit_range base set 100.0
-waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] color hex D9333F
-waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] fade 95 1 100 0
+waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] color hex 6d6d6d
+waypoint modify @n[tag=ohh-summon, tag=ohh-grave-waypoint] style set bowtie
